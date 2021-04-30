@@ -1,0 +1,165 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* Background [Gradient] */
+.main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    opacity:0.6;
+    background: linear-gradient(rgba(128, 0, 128, 0.712),rgba(255, 0, 0, 0.609),rgba(255,255,0,0.1),rgb(145, 210, 236),rgb(82, 163, 200),rgb(101, 180, 209));   
+}
+/* Sun */
+.sun{
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border-top-left-radius: 50%;
+    border-top-right-radius:50%;
+    opacity: 0.7;
+    background:linear-gradient(180deg,orange,yellow,rgba(255,255,255,0),rgba(255,255,255,0));
+    left: 43%;
+    top: 125px;
+    z-index: 2;
+}
+/* Clouds */
+/* for left cloud */
+.cloud-body-left{
+    position: absolute;
+    top: 55px;
+    left: 150px;
+    background-color: transparent;
+    height: 200px;
+    width: 200px;
+    transform: scale(0.7) rotate(-4deg) skewX(360deg);
+    opacity: 0.5;
+    animation-name: clouds-floating-left;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+/* for right cloud */
+.cloud-body-right{
+    position: absolute;
+    top: 50px;
+    right: 160px;
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
+    transform:rotate(-5deg) scale(0.6);
+    animation-name: clouds-floating-right;
+    animation-duration: 35s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-direction: reverse;
+}
+/* for center cloud */
+.cloud-body-center{
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    z-index:1;
+    height: 200px;
+    width: 200px;
+    transform:scale(0.55) rotate(-6deg);
+    opacity: 0.5;
+    animation-name: clouds-floating-center;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+
+}
+/* These are the parts of cloud */
+.cloud-part1{
+    position: inherit;
+    width: 80px;
+    height: 80px;
+    background: skyblue;
+    border-radius: 50%;
+    top: 20px;
+}
+.cloud-part2{
+    position: inherit;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background:skyblue;
+    border-radius: 50%;
+    top: 10px;   
+}
+.cloud-part3{
+    position: inherit;
+    left: 110px;
+    width: 85px;
+    height: 85px;
+    background:skyblue;
+    border-radius: 50%;
+    top: 25px;
+    
+}
+/* for boat */
+/* .boat{
+    height: 150px;
+    width: 400px;
+    background:linear-gradient(rgba(78, 78, 78, 0.534),rgb(153, 91, 91),rgba(139, 83, 83, 0.911));
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    z-index: 20;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform:scale(0.4);
+}
+.boat-rev{
+    height: 150px;
+    width: 200px;
+    background:linear-gradient(rgb(145, 210, 236),rgb(82, 163, 200),rgb(101, 180, 209));
+    opacity: 0.1;
+    position: absolute;
+    bottom: 120px;
+    right: 150px;
+    z-index: 20;
+    border-bottom-left-radius: 50%;
+    transform:scale(0.9);
+    border-bottom-right-radius: 50%;
+}   */ 
+/* If you want a boat to appear on sea then uncomment the above codes */
+
+/* for animation */
+@keyframes clouds-floating-left{
+    0%{
+        left:10px;
+    }
+    50%{
+          left: 200px;
+    }
+    100%{
+        left:0px;
+    }
+}
+@keyframes clouds-floating-right{
+    0%{
+        right: 10px;
+    }
+    50%{
+        right:200px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes clouds-floating-center{
+    0%{
+        left: 500px;
+    }
+    50%{
+        left:650px;
+    }
+    100%{
+        left:500px
+    }
+}
