@@ -1,2 +1,2 @@
 # Sunset
-Sunset created with HTML and CSS
+Sunset created with HTML and CSS.
