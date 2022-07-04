@@ -1,2 +1,2 @@
 # Sunset
-Just CSS.
+A beautiful sunset created using pure CSS(gradient).
